@@ -1,24 +1,11 @@
-# README
+# Hangry Eats
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app takes into account your mood to recommend a restaurant. It will gain insight into what you consider "comfort food" based on a questionnaire you answer when you sign up.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 2.6.2
 
-* System dependencies
+* Rails 5.2.3
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Haml for views
