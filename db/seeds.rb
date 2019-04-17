@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Mood.destroy_all
+Restaurant.destroy_all
+
+@mood = Mood.create!(
+  name: "Happy"
+)
+
+@rest = Restaurant.create!(
+  name: "Star Kitchen",
+  cost: "9",
+  location: "Chicago",
+  mood: @mood,
+)
