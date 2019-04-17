@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :type
       t.integer :cost
       t.string :location
-
+      t.belongs_to :mood, foreign_key: true
       t.timestamps
     end
   end

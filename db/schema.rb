@@ -10,15 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_081043) do
+ActiveRecord::Schema.define(version: 2019_04_15_171229) do
+
+  create_table "moods", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "type"
     t.integer "cost"
     t.string "location"
+    t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["mood_id"], name: "index_restaurants_on_mood_id"
   end
 
 end
