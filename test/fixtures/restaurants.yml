@@ -2,12 +2,14 @@
 
 one:
   name: MyString
-  type: 
+  type:
   cost: 1
   location: MyString
+  mood_id: 1
 
 two:
   name: MyString
-  type: 
+  type:
   cost: 1
   location: MyString
+  mood_id: 1
