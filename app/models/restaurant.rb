@@ -1,3 +1,3 @@
 class Restaurant < ApplicationRecord
-  belongs_to :mood
+  has_and_belongs_to_many :moods
 end
