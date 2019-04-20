@@ -8,13 +8,13 @@
 Mood.destroy_all
 Restaurant.destroy_all
 
-@mood = Mood.create!(
-  name: "Happy"
+@mood = Mood.create!([
+  {name: "Happy"}]
 )
 
 @rest = Restaurant.create!(
   name: "Star Kitchen",
   cost: "9",
   location: "Chicago",
-  mood: @mood,
+  moods: @mood,
 )
