@@ -5,6 +5,21 @@
       %ul
         - @restaurant.errors.full_messages.each do |message|
           %li= message
-
+  %ul.inputs
+    %li
+      = f.label :name, "Restaurant name"
+      = f.text_field :name
+    -# %li
+    -#   = f.label :type, "Restaurant type"
+    -#   = f.text_field :type
+    %li
+      = f.label :cost, "Estimate of cost 1 to 5"
+      = f.text_field :cost
+    %li
+      = f.label :location, "Restaurant address"
+      = f.text_field :location
+    %li
+      = f.label :mood_names, "Moods (enter list and seperate with commas)"
+      = f.text_field :mood_names
   .actions
     = f.submit 'Save'
