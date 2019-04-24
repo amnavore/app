@@ -1,3 +1,3 @@
 class Mood < ApplicationRecord
-  has_many :resturants
+  has_and_belongs_to_many :resturants
 end

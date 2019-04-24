@@ -1,4 +1,4 @@
-%h1 Listing restaurants
+%h1 Your Restaurants
 
 %table
   %thead
@@ -9,6 +9,15 @@
 
   %tbody
     - @restaurants.each do |restaurant|
+      %tr
+        %td= restaurant.name
+      %tr
+        - restaurant.mood_names.split(",").each do |mood|
+          %td= mood
+      %tr
+        %td= restaurant.location
+        %td= "$"*(restaurant.cost)
+
       %tr
         %td= link_to 'Show', restaurant
         %td= link_to 'Edit', edit_restaurant_path(restaurant)

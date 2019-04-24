@@ -1,5 +1,11 @@
 %p#notice= notice
 
+%h2= @restaurant.name
+%ul
+  %li= @restaurant.cost
+  %li= @restaurant.location
+  %li= @restaurant.mood_names
+
 
 = link_to 'Edit', edit_restaurant_path(@restaurant)
 \|

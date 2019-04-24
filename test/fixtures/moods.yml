@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-Happy:
-  id: 1
-  name: MyString
+happy:
+  name: happy
 
-Sad:
-  id: 2
-  name: MyString
+sad:
+  name: sad
