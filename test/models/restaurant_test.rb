@@ -5,14 +5,14 @@ class RestaurantTest < ActiveSupport::TestCase
     @res = restaurants(:chinese)
   end
   test "Cannot add a restaurant without a name" do
-    invalid = Restaurant.create(cost: @res.cost, mood_names: @res.mood_names)
+    invalid = Restaurant.create(cost: @res.cost, location: @res.location, mood_names: @res.mood_names)
     assert_not invalid.valid?
     valid = invalid
     valid.name = @res.name
     assert valid.valid?
   end
   test "Cannot add a restaurant with invalid costs" do
-    invalid = Restaurant.create(name: @res.name, mood_names: @res.mood_names)
+    invalid = Restaurant.create(name: @res.name,location: @res.location, mood_names: @res.mood_names)
     assert_not invalid.valid?
     invalid.cost = 8
     assert_not invalid.valid?
@@ -20,6 +20,14 @@ class RestaurantTest < ActiveSupport::TestCase
     assert_not invalid.valid?
     valid = invalid
     valid.cost = @res.cost
+    assert valid.valid?
+  end
+  test "Location is present before creating" do
+    invalid = Restaurant.create(name: @res.name, cost: @res.cost, mood_names: @res.mood_names)
+    assert_not invalid.valid?
+    valid = invalid
+    valid.location = @res.location
+    valid.save
     assert valid.valid?
   end
   test "Mood names returns in the same format that it is added in" do
