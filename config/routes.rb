@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-     match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  get '/auth/github', as: 'github_auth'
+  match '/auth/github/callback', to: 'sessions#create', via: [:get, :post]
   resources :restaurants
 end
