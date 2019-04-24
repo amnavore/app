@@ -26,7 +26,7 @@ Restaurant.destroy_all
 
 @rest = Restaurant.create!(
   name: "Star Kitchen",
-  cost: "9",
+  cost: 2,
   location: "Chicago",
-  mood: @mood_one,
+  mood_names: @mood_one.name,
 )
