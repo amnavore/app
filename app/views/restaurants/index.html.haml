@@ -12,8 +12,9 @@
       %tr
         %td= restaurant.name
       %tr
-        - restaurant.mood_names.split(",").each do |mood|
-          %td= mood
+        - if restaurant.mood_names
+          - restaurant.mood_names.split(",").each do |mood|
+            %td= mood
       %tr
         %td= restaurant.location
         %td= "$"*(restaurant.cost)
