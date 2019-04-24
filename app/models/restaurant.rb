@@ -1,4 +1,7 @@
 class Restaurant < ApplicationRecord
+  validates :name, presence: true
+  validates :cost, inclusion: {in: 1..5}
+  validates :location, presence: true
   has_and_belongs_to_many :moods
 
   def mood_names=(names)
