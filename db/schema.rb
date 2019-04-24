@@ -27,13 +27,11 @@ ActiveRecord::Schema.define(version: 2019_04_20_034511) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "foodtype"
     t.integer "cost"
     t.string "location"
-    t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["mood_id"], name: "index_restaurants_on_mood_id"
   end
 
 end
