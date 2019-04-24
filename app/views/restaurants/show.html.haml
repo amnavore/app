@@ -3,6 +3,8 @@
 %h2= @restaurant.name
 %ul
   %li= @restaurant.cost
+  %li= @restaurant.foodtype
+  =image_tag ("/../#{@restaurant.foodimage}"), alt: 'Food Type Image', width: "250px"
   %li= @restaurant.location
   %li= @restaurant.mood_names
 
