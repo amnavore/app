@@ -13,26 +13,74 @@
  *= require_tree .
  *= require_self
  */
+
+$default_color: #717171;
+
 $base_font_size: 18px;
 @function pixel_to_em($pixel, $context:$base_font_size){
   @return ($pixel/$context) * 1em;
 }
 
+
+/* Base Styles (HTML Selectors) */
 h1{
   font-family: sans-serif;
   font-size: pixel_to_em(24px);
   font-weight: 700;
   text-align: center;
-  color: #717171;
-
+  color: $default_color;
+  margin-top: pixel_to_em(30px);
 }
 
+/*Modular Styles(Classes)*/
 .login_btn{
   text-align: center;
   width: pixel_to_em(250px);
   background-color: #a1a1a1;
   padding: pixel_to_em(10px) 0;
   margin: pixel_to_em(125px) pixel_to_em(89px);
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.inputs{
+  margin-left:pixel_to_em(67px);
+  margin-bottom: pixel_to_em(40px);
+  margin-top: pixel_to_em(40px);
+  width: pixel_to_em(300px);
+  li{
+    label{
+      display: block;
+      margin: pixel_to_em(5px) 0;
+      color: $default_color;
+    }
+    input{
+      border: none;
+      border-bottom: #ffce7f solid thin ;
+      width: pixel_to_em(315px);
+    }
+  }
+}
+
+.actions{
+  text-align: center;
+  input{
+    width: pixel_to_em(250px);
+    background-color: #ffce7f;
+    border: none;
+    border-radius: pixel_to_em(5px);
+    padding: pixel_to_em(8px);
+  }
+}
+
+.back_btn{
+  position: relative;
+  bottom:  pixel_to_em(53px);
+  width: pixel_to_em(60px);
+  padding: pixel_to_em(5px) pixel_to_em(20px);
+  background-color: #7dcece;
   a{
     text-decoration: none;
     color: black;
