@@ -18,7 +18,7 @@ private
 
   def authenticate_user
     unless user_signed_in?
-      redirect_to login_url, notice: "Please log in first"
+      redirect_to 'localhost:3000/login', notice: "Please log in first"
     end
 
   end
