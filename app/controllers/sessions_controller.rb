@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       user.email = github_hash['info']['email']
     end
     self.current_user = @user
+    redirect_to restaurants_url
   end
   def login
   end
