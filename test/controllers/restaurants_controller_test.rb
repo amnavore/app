@@ -3,6 +3,7 @@ require 'test_helper'
 class RestaurantsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @restaurant = restaurants(:chinese)
+    login_with('github')
   end
 
   test "should get index" do
@@ -37,7 +38,7 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
     patch restaurant_url(@restaurant), params: { restaurant: {name: @restaurant.name, mood_names: @restaurant.mood_names } }
     assert_redirected_to restaurant_url(@restaurant)
   end
-  
+
   test "should destroy restaurant" do
     assert_difference('Restaurant.count', -1) do
       delete restaurant_url(@restaurant)
