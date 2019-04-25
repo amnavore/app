@@ -1,14 +1,24 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+helper_method :current_user
 
-  private
+private
 
-  def current_user
-    @current_user ||= User.find_by(uid: session[:uid])
+def current_user
+  @current_user ||= User.find_by(uid: session[:uid])
+end
+
+def current_user=(user)
+  session[:uid] = user.uid
+  session[:name] = user.name
+
+  def user_signed_in?
+    !!current_user
   end
 
-  def current_user=(user)
-    session[:uid] = user.uid
-    session[:name] = user.name
+  def authenticate_user
+    unless user_signed_in?
+      redirect_to login_url, notice: "Please log in first"
+    end
+
   end
 end
