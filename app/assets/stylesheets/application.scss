@@ -86,3 +86,11 @@ h1{
     color: black;
   }
 }
+
+/*State Styles(Media queries, JS)*/
+@media (min-width: pixel_to_em(1000px)){
+  .login_btn{
+    margin-left: pixel_to_em(615px);
+    background-color:#7dcece;
+  }
+}
