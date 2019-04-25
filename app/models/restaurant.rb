@@ -4,9 +4,13 @@ class Restaurant < ApplicationRecord
   def mood_names=(names)
     self.moods = []
     names.split(',').each do |name|
-      mood = Mood.find_by(name: name.strip)
+      mood = Mood.find_by(name: name.strip.capitalize)
 
-      self.moods << mood
+      if !!mood
+        self.moods << mood
+      else
+        # Do Nothing
+      end
     end
   end
 
@@ -18,4 +22,17 @@ class Restaurant < ApplicationRecord
       moods = nil
     end
   end
+
+  def setting_foodimg=(foodtype)
+    if foodtype.nil? || foodtype.empty?
+    else
+      foodimage_path = foodtype + ".jpg"
+      self.update_attribute(:foodtype, foodtype)
+      self.update_attribute(:foodimage, foodimage_path)
+    end
+  end
+
+  def setting_foodimg
+  end
+
 end
