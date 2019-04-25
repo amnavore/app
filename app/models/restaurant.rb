@@ -7,7 +7,8 @@ class Restaurant < ApplicationRecord
   def mood_names=(names)
     self.moods = []
     names.split(',').each do |name|
-      mood = Mood.find_by(name: name.strip.capitalize)
+      cap_name = name.capitalize
+      mood = Mood.find_by(name: cap_name.strip)
 
       if !!mood
         self.moods << mood

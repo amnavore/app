@@ -2,14 +2,12 @@
 
 chinese:
   name: Star One
-  type:
   cost: 1
   location: Chicago
-  moods: happy
+  moods: Happy
 
 two:
   name: MyString
-  type:
   cost: 1
   location: Chicago
-  moods: happy, sad
+  moods: Happy, Sad
