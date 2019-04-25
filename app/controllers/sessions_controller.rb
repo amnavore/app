@@ -8,4 +8,8 @@ class SessionsController < ApplicationController
       user.email = github_hash['info']['email']
     end
   end
+  def login
+  end
+  def logout
+  end
 end
