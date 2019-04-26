@@ -78,19 +78,58 @@ h1{
 .back_btn{
   position: relative;
   bottom:  pixel_to_em(53px);
-  width: pixel_to_em(60px);
-  padding: pixel_to_em(5px) pixel_to_em(20px);
-  background-color: #7dcece;
   a{
     text-decoration: none;
     color: black;
+    padding: pixel_to_em(5px) pixel_to_em(20px);
+    background-color: #7dcece;
   }
 }
 
 /*State Styles(Media queries, JS)*/
 @media (min-width: pixel_to_em(1000px)){
+  h1{
+    margin-top: pixel_to_em(15px);
+    font-size: pixel_to_em(36px);
+  }
+  .login_title{
+    margin-top:pixel_to_em(60px);
+    font-size: pixel_to_em(48px);
+  }
   .login_btn{
     margin-left: pixel_to_em(615px);
+    margin-top: pixel_to_em(200px);
     background-color:#7dcece;
+  }
+  .inputs{
+    margin-left:pixel_to_em(465px);
+    margin-bottom: pixel_to_em(60px);
+    margin-top: pixel_to_em(80px);
+    width: pixel_to_em(600px);
+    li{
+      margin: pixel_to_em(40px) 0;
+      label{
+        font-weight: 700;
+        font-size: pixel_to_em(19px);
+      }
+      input{
+        width: pixel_to_em(555px);
+      }
+    }
+  }
+  .actions{
+    text-align: center;
+    input{
+      padding: pixel_to_em(12px);
+
+    }
+  }
+  .back_btn{
+    bottom:  pixel_to_em(35px);
+    left: pixel_to_em(200px);
+    a{
+      padding: pixel_to_em(10px) pixel_to_em(40px);
+      border-radius: pixel_to_em(5px);
+    }
   }
 }
