@@ -5,7 +5,7 @@
   %tbody
     - @restaurants.each do |restaurant|
       %tr
-        %td.restaurants= "Restaurant Name: #{restaurant.name}"
+        %td.restaurants= "#{restaurant.name}"
 
       %tr
         %td= link_to 'Show', restaurant
