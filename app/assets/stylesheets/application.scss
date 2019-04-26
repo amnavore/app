@@ -38,7 +38,7 @@ table{
   text-align: left;
   color: $default_color;
   margin: pixel_to_em(40px) 0;
-  margin-left: pixel_to_em(5px);
+  margin-left: pixel_to_em(125px);
   width: pixel_to_em(300px);
   tbody{
     td{
@@ -60,6 +60,7 @@ table{
 td.restaurants{
   font-weight: 700;
   padding-top: pixel_to_em(35px);
+  width: 33%;
 }
 
 .login_btn{
@@ -95,6 +96,7 @@ td.restaurants{
 
 .actions{
   text-align: center;
+  padding-bottom: pixel_to_em(50px);
   input{
     width: pixel_to_em(250px);
     background-color: #ffce7f;
@@ -112,24 +114,22 @@ td.restaurants{
   }
 }
 
-.back_btn{
-  position: relative;
-  bottom:  pixel_to_em(53px);
+.logout{
   a{
-    text-decoration: none;
-    color: black;
-    padding: pixel_to_em(5px) pixel_to_em(20px);
-    background-color: #7dcece;
+    width: 15%;
+    position: absolute;
+    top: pixel_to_em(65px);
+    left: pixel_to_em(25px);
   }
 }
 
 .showview{
-  border: 1px solid black;
-  margin: 20px;
+  border: pixel_to_em(1px) solid black;
+  margin: pixel_to_em(20px);
   padding: 5% 5% 20% 2%;
   h2{
     font-family: sans-serif;
-    font-size: 1.3333333333em;
+    font-size: pixel_to_em(24px);
     font-weight: 700;
     text-align: center;
     color: #717171;
@@ -172,7 +172,7 @@ td.restaurants{
   }
   img{
     grid-area: img;
-    width: 150px;
+    width: pixel_to_em(150px);
   }
 }
 
@@ -182,20 +182,29 @@ td.restaurants{
     margin-top: pixel_to_em(15px);
     font-size: pixel_to_em(36px);
   }
+  table{
+    margin-left: 33%;
+    width: 40%;
+    .restaurants{
+      padding-top: pixel_to_em(55px);
+      padding-bottom: pixel_to_em(35px);
+    }
+    a{
+      padding-left: pixel_to_em(25px);
+      padding-right: pixel_to_em(25px);
+    }
+  }
   .login_title{
     margin-top:pixel_to_em(60px);
     font-size: pixel_to_em(48px);
   }
   .login_btn{
-    margin-left: pixel_to_em(615px);
+    margin-left: 45%;
     margin-top: pixel_to_em(200px);
-    background-color:#7dcece;
   }
   .inputs{
-    margin-left:pixel_to_em(465px);
-    margin-bottom: pixel_to_em(60px);
-    margin-top: pixel_to_em(80px);
-    width: pixel_to_em(600px);
+    margin: auto;
+    width: 30%;
     li{
       margin: pixel_to_em(40px) 0;
       label{
@@ -211,24 +220,27 @@ td.restaurants{
     text-align: center;
     input{
       padding: pixel_to_em(12px);
-
     }
   }
-  .back_btn{
-    bottom:  pixel_to_em(35px);
-    left: pixel_to_em(200px);
+
+  .logout{
     a{
-      padding: pixel_to_em(10px) pixel_to_em(40px);
-      border-radius: pixel_to_em(5px);
+      width: 10%;
+      position: absolute;
+      top: pixel_to_em(65px);
+      left: pixel_to_em(100px);
     }
   }
 
   .showview{
     margin: 50px 250px 0px 250px;
     padding: 5% 12% 10% 12%;
+    h2{
+      font-size: pixel_to_em(36px);
+    }
     ul{
       p{
-        font-size: 16pt;
+        font-size: pixel_to_em(24px);
       }
     }
     img{
