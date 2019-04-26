@@ -5,7 +5,7 @@
   %ul
     %li.cost
       %p= "Cost:"
-      %p= "$#{@restaurant.cost}"
+      %p= @restaurant.set_dollar
     %li.type
       %p= "Food Type:"
       %p= @restaurant.foodtype
@@ -14,7 +14,10 @@
       %p= @restaurant.location
     %li.moods
       %p= "Moods:"
-      %p= @restaurant.moods.name
+      %p
+        - if @restaurant.mood_names
+          - @restaurant.mood_names.split(",").each do |mood|
+            %p= mood
     =image_tag ("/../stockImages/#{@restaurant.foodimage}"), alt: 'Food Type Image'
 
 %footer.actions

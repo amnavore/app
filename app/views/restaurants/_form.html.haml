@@ -11,15 +11,16 @@
       = f.text_field :name
     %li
       = f.label :setting_foodimg, "Restaurant type"
-      = f.text_field :setting_foodimg
+      = f.select :setting_foodimg, ['chinese', 'burger'], :selected =>'chinese'
     %li
-      = f.label :cost, "Estimate of cost 1 to 5"
-      = f.text_field :cost
+      = f.label :cost, "Estimate of cost (1 low / 5 high)"
+      = f.select :cost, ['1', '2', '3', '4', '5'], :selected =>'1'
     %li
       = f.label :location, "Restaurant address"
       = f.text_field :location
     %li
-      = f.label :mood_names, "Moods (enter comma seperated list)"
-      = f.text_field :mood_names
+      = f.label :mood_names, "Moods"
+      = f.select :mood_names, ['Happy', 'Sad', 'Rich', 'Adventurous']
+
   .actions
     = f.submit 'Save'
