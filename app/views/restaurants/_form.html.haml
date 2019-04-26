@@ -11,10 +11,10 @@
       = f.text_field :name
     %li
       = f.label :setting_foodimg, "Restaurant type"
-      = f.select :setting_foodimg, ['chinese', 'burger']
+      = f.select :setting_foodimg, ['chinese', 'burger'], :selected =>'chinese'
     %li
       = f.label :cost, "Estimate of cost (1 low / 5 high)"
-      = f.select :cost, ['1', '2', '3', '4', '5']
+      = f.select :cost, ['1', '2', '3', '4', '5'], :selected =>'1'
     %li
       = f.label :location, "Restaurant address"
       = f.text_field :location
