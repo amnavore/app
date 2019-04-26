@@ -39,4 +39,14 @@ class Restaurant < ApplicationRecord
   def setting_foodimg
   end
 
+  def set_dollar
+    dollars = self.cost
+    signs = ''
+    dollars.times do |i|
+      signs += "$"
+      i+1
+    end
+    return signs
+  end
+
 end
