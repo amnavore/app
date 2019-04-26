@@ -1,14 +1,23 @@
 %p#notice= notice
 
-%h2= @restaurant.name
-%ul
-  %li= @restaurant.cost
-  %li= @restaurant.foodtype
-  =image_tag ("/../#{@restaurant.foodimage}"), alt: 'Food Type Image', width: "250px"
-  %li= @restaurant.location
-  %li= @restaurant.mood_names
+%article.showview
+  %h2= @restaurant.name
+  %ul
+    %li.cost
+      %p= "Cost:"
+      %p= "$#{@restaurant.cost}"
+    %li.type
+      %p= "Food Type:"
+      %p= @restaurant.foodtype
+    %li.address
+      %p= "Address:"
+      %p= @restaurant.location
+    %li.moods
+      %p= "Moods:"
+      %p= @restaurant.moods.name
+    =image_tag ("/../stockImages/#{@restaurant.foodimage}"), alt: 'Food Type Image'
 
-
-= link_to 'Edit', edit_restaurant_path(@restaurant)
-\|
-= link_to 'Back', restaurants_path
+%footer.actions
+  = link_to 'Edit', edit_restaurant_path(@restaurant)
+  \|
+  = link_to 'Back', restaurants_path
