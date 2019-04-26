@@ -27,6 +27,23 @@ Restaurant.destroy_all
 @rest = Restaurant.create!(
   name: "Star Kitchen",
   cost: 2,
+  foodtype: "chinese",
+  location: "Chicago",
+  mood_names: @mood_one.name,
+)
+
+@mex = Restaurant.create!(
+  name: "Chipotle",
+  cost: 2,
+  foodtype: "mexican",
+  location: "Chicago",
+  mood_names: @mood_one.name,
+)
+
+@mc = Restaurant.create!(
+  name: "McDonalds",
+  cost: 1,
+  foodtype: "fastfood",
   location: "Chicago",
   mood_names: @mood_one.name,
 )
