@@ -28,6 +28,7 @@ Restaurant.destroy_all
   name: "Star Kitchen",
   cost: 2,
   foodtype: "chinese",
+  foodimage: "chinese.jpg",
   location: "Chicago",
   mood_names: @mood_one.name,
 )
@@ -36,6 +37,7 @@ Restaurant.destroy_all
   name: "Chipotle",
   cost: 2,
   foodtype: "mexican",
+  foodimage: "mexican.jpg",
   location: "Chicago",
   mood_names: @mood_one.name,
 )
@@ -44,6 +46,7 @@ Restaurant.destroy_all
   name: "McDonalds",
   cost: 1,
   foodtype: "fastfood",
+  foodimage: "fastfood.jpg",
   location: "Chicago",
   mood_names: @mood_one.name,
 )

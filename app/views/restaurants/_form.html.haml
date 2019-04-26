@@ -11,16 +11,16 @@
       = f.text_field :name
     %li
       = f.label :setting_foodimg, "Restaurant type"
-      = f.select :setting_foodimg, ['chinese', 'burger'], :selected =>'chinese'
+      = f.select :setting_foodimg, ['-', 'chinese', 'fastfood', 'mexican']
     %li
       = f.label :cost, "Estimate of cost (1 low / 5 high)"
-      = f.select :cost, ['1', '2', '3', '4', '5'], :selected =>'1'
+      = f.select :cost, ['-', '1', '2', '3', '4', '5']
     %li
       = f.label :location, "Restaurant address"
       = f.text_field :location
     %li
       = f.label :mood_names, "Moods"
-      = f.select :mood_names, ['Happy', 'Sad', 'Rich', 'Adventurous']
+      = f.select :mood_names, ['-', 'Happy', 'Sad', 'Rich', 'Adventurous']
 
   .actions
     = f.submit 'Save'
