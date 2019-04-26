@@ -5,7 +5,7 @@
   %ul
     %li.cost
       %p= "Cost:"
-      %p= "$#{@restaurant.cost}"
+      %p= @restaurant.set_dollar
     %li.type
       %p= "Food Type:"
       %p= @restaurant.foodtype
