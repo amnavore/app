@@ -1,12 +1,7 @@
 %h1 Your Restaurants
 
 %table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
+  
   %tbody
     - @restaurants.each do |restaurant|
       %tr
@@ -25,6 +20,6 @@
         %td= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
-
-= link_to 'New Restaurant', new_restaurant_path
-= link_to 'Logout', logout_url
+.actions
+  = link_to 'New Restaurant', new_restaurant_path
+  = link_to 'Logout', logout_url

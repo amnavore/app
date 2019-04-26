@@ -73,6 +73,14 @@ h1{
     border-radius: pixel_to_em(5px);
     padding: pixel_to_em(8px);
   }
+  a{
+    text-decoration: none;
+    color: black;
+    width: pixel_to_em(250px);
+    background-color: #7dcece;
+    border-radius: pixel_to_em(5px);
+    padding: pixel_to_em(10px) pixel_to_em(15px);
+  }
 }
 
 .back_btn{
@@ -138,10 +146,14 @@ table{
   font-size: pixel_to_em(18px);
   text-align: left;
   color: $default_color;
-  margin-left:pixel_to_em(67px);
-  margin-bottom: pixel_to_em(40px);
-  margin-top: pixel_to_em(40px);
+  margin: pixel_to_em(40px) 0;
+  margin-left: pixel_to_em(5px);
   width: pixel_to_em(300px);
+  tbody{
+    td{
+    padding: pixel_to_em(10px) 0;
+    }
+  }
   a{
     font-family: sans-serif;
     font-size: pixel_to_em(16px);
@@ -150,8 +162,11 @@ table{
     border: none;
     border-radius: pixel_to_em(5px);
     padding: pixel_to_em(8px);
-    }
+    text-decoration: none;
+    color: black
   }
+}
 td.restaurants{
   font-weight: 700;
+  padding-top: pixel_to_em(35px);
 }
