@@ -19,8 +19,8 @@
       = f.label :location, "Restaurant address"
       = f.text_field :location
     %li
-      = f.label :mood_names, "Moods (hold control button to select multiple)"
-      = f.select :mood_names, ['Happy', 'Sad', 'Rich', 'Adventurous', 'Gloomy'], {}, {multiple: true}
+      = f.label :mood_names, "Moods"
+      = f.select :mood_names, ['Happy', 'Sad', 'Rich', 'Adventurous']
 
   .actions
     = f.submit 'Save'
