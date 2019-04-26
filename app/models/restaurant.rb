@@ -37,6 +37,7 @@ class Restaurant < ApplicationRecord
   end
 
   def setting_foodimg
+    return self.foodtype
   end
 
   def set_dollar

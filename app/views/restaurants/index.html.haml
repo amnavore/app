@@ -1,18 +1,11 @@
 %h1 Your Restaurants
 
 %table
-  
+
   %tbody
     - @restaurants.each do |restaurant|
       %tr
-        %td.restaurants= restaurant.name
-      %tr
-        - if restaurant.mood_names
-          - restaurant.mood_names.split(",").each do |mood|
-            %td= mood
-      %tr
-        %td= restaurant.location
-        %td= "$"*(restaurant.cost)
+        %td.restaurants= "Restaurant Name: #{restaurant.name}"
 
       %tr
         %td= link_to 'Show', restaurant
@@ -22,4 +15,4 @@
 %br
 .actions
   = link_to 'New Restaurant', new_restaurant_path
-  = link_to 'Logout', logout_url
+  .logout= link_to 'Logout', logout_url
