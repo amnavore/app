@@ -10,7 +10,7 @@
   %tbody
     - @restaurants.each do |restaurant|
       %tr
-        %td= restaurant.name
+        %td.restaurants= restaurant.name
       %tr
         - if restaurant.mood_names
           - restaurant.mood_names.split(",").each do |mood|
