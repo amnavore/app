@@ -1,16 +1,9 @@
 %h1 Your Restaurants
 
-%table
-
-  %tbody
-    - @restaurants.each do |restaurant|
-      %tr
-        %td.restaurants= "#{restaurant.name}"
-
-      %tr
-        %td= link_to 'Show', restaurant
-        %td= link_to 'Edit', edit_restaurant_path(restaurant)
-        %td= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }
+.moodFoods
+  - @restaurants.each do |restaurant|
+    %div{:class => "#{restaurant.mood_names}"}
+      = link_to "#{restaurant.mood_names} : #{restaurant.name}", restaurant
 
 %br
 .actions

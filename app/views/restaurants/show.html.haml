@@ -1,7 +1,5 @@
-%p#notice= notice
-
+%h1= @restaurant.name
 %article.showview
-  %h2= @restaurant.name
   %ul
     %li.cost
       %p= "Cost:"
@@ -24,3 +22,5 @@
   = link_to 'Edit', edit_restaurant_path(@restaurant)
   \|
   = link_to 'Back', restaurants_path
+
+%p#notice= notice
